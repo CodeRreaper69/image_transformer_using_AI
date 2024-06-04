@@ -51,6 +51,7 @@ with st.expander(":violet[WHAT IS THIS ?]"):
     st.write(":green[FIRST UPLOAD THE IMAGE THEN THE MAGIC WILL HAPPEN!🤩]")
     st.write("""
         **How to Use IMAGE TRANSFORMER:**
+        **GET TO THE AI CORNER FOR GETTING CUSTOM QUERIES AND REQUESTS ABOUT THE IMAGE BEING COMPLETED AND ALSO GET AI SUGGESTIONS ABOUT EDITING THE IMAGE**
 
         1. **Upload Image**: Click on the "Upload an image file to continue" button and select the image you want to edit. Supported formats include JPEG, PNG, BMP, and TIFF.
 
