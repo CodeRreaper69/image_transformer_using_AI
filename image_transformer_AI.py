@@ -22,7 +22,6 @@ st.subheader(":rainbow[GET AI SUGGESTIONS AND GENERATIONS AT YOUR FINGER TIPS!]"
 
 st.caption(":grey[TO ALL THOSE WHO SEEK ACTION, ACCORDING TO NEWTON, THERE ALWAYS LIES A REACTION]")
 st.markdown("""
----
 Created and Managed by [Sourabh Dey](https://linktr.ee/sourabhdey)
 """)
 
