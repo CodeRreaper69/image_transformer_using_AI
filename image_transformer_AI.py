@@ -17,31 +17,32 @@ genai.configure(api_key=Google_API_KEY)
 
 st.set_page_config(page_title="IMAGE_TRANSFORMATION USING AI", page_icon="⚛️")
 
-st.title(":red[WELCOME TO IMAGE TRANSFORMATION USING AI]")
+st.title(":red[WELCOME TO IMAGE TRANSFORMATION USING GEN_AI]")
 st.subheader(":rainbow[GET AI SUGGESTIONS AND GENERATIONS AT YOUR FINGER TIPS!]")
 
 st.caption(":grey[TO ALL THOSE WHO SEEK ACTION, ACCORDING TO NEWTON, THERE ALWAYS LIES A REACTION]")
+st.markdown("""
+---
+Created and Managed by [Sourabh Dey](https://linktr.ee/sourabhdey)
+""")
 
 def stream_words(string,t):
     for word in string:
         yield word
         time.sleep(t)
 
-note = ":green[For smartphone users, open this app in desktop mode for better experience]"
+note_1 = ":green[For smartphone users, open this app in desktop mode for better experience]"
 
-message = """:orange[Click/Swipe on the sidebar or "<" this icon after the image has been added for the editing tools]"""
+note_2 = """:orange[Click/Swipe on the sidebar or "<" this icon after the image has been added for the editing tools]"""
 
-st.write_stream(stream_words(note,0.05))
+st.write_stream(stream_words(note_1,0.05))
 
 
-message_2 = """:violet[Navigate to the AI CORNER after uploading the image for getting AI suggestions about the image and about editing the image, this is all about GenAI]"""
+note_3 = """:violet[Navigate to the AI CORNER after uploading the image for getting AI suggestions about the image and about editing the image, this is all about GenAI]"""
 
-st.write_stream(stream_words(message_2,0.004))
+st.write_stream(stream_words(note_3,0.04))
 
-st.markdown("""
----
-Created and Managed by [Sourabh Dey](https://linktr.ee/sourabhdey)
-""")
+
 
 # Function to load an image from uploaded file
 def load_image(image_file):
@@ -98,7 +99,7 @@ def image_prompter(photo,prompt):
 
 #st.toast(":orange[Click on the "<" after #the image has been added for the editing #tools]")
 
-st.write_stream(stream_words(message,0.03))
+st.write_stream(stream_words(note_2,0.03))
 
 if uploaded_file is not None:
     #st.toast(":rainbow[NOW START EDITING]")
