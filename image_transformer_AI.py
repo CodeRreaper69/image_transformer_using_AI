@@ -34,8 +34,9 @@ message = """:orange[Click/Swipe on the sidebar or "<" this icon after the image
 st.write_stream(stream_words(note,0.05))
 
 
+message_2 = """:violet[Navigate to the AI CORNER after uploading the image for getting AI suggestions about the image and about editing the image, this is all about GenAI]"""
 
-
+st.write_stream(stream_words(message_2,0.004))
 
 st.markdown("""
 ---
