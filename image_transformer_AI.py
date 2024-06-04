@@ -15,9 +15,10 @@ genai.configure(api_key=Google_API_KEY)
 
 
 
-st.set_page_config(page_title="IMAGE_TRANSFORMER.py", page_icon="✨")
+st.set_page_config(page_title="IMAGE_TRANSFORMATION USING AI", page_icon="✨")
 
-st.title(":rainbow[WELCOME TO IMAGE TRANSFORMER]")
+st.title(":red[WELCOME TO IMAGE TRANSFORMER]")
+st.subheader(":[GET AI SUGGESTIONS AND GENERATIONS AT YOUR FINGER TIPS!]
 
 st.caption(":grey[TO ALL THOSE WHO SEEK ACTION, ACCORDING TO NEWTON, THERE ALWAYS LIES A REACTION]")
 
