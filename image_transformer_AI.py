@@ -37,7 +37,7 @@ note_2 = """:orange[Click/Swipe on the sidebar or "<" this icon after the image 
 st.write_stream(stream_words(note_1,0.05))
 
 
-note_3 = """:violet[Navigate to the AI CORNER after uploading the image for getting AI suggestions about the image and about editing the image, this is all about GenAI]"""
+note_3 = """:blue[Navigate to the AI CORNER after uploading the image for getting AI suggestions about the image and about editing the image, this is all about GenAI]"""
 
 st.write_stream(stream_words(note_3,0.04))
 
