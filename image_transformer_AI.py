@@ -241,7 +241,7 @@ if uploaded_file is not None:
     # Explanation for the first button
     st.write(":violet[### Ask AI for Suggestions]")
     st.write(":blue[Click the button below to get AI suggestions for editing the uploaded image.]")
-    generate = st.button("AI SUGGESTIONS")
+    generate = st.button("AI SUGGESTIONS ABOUT EDITING THE IMAGE")
 
     st.subheader(":red[___OR___]")  
     # Explanation for the custom prompt
