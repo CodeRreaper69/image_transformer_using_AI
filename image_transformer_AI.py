@@ -32,7 +32,7 @@ def stream_words(string,t):
 
 note_1 = ":green[For smartphone users, open this app in desktop mode for better experience]"
 
-note_2 = """:orange[Click/Swipe on the sidebar or "<" this icon after the image has been added for the editing tools]"""
+note_2 = """:orange[Click/Swipe on the sidebar or ">" this icon after the image has been added for the editing tools]"""
 
 st.write_stream(stream_words(note_1,0.05))
 
