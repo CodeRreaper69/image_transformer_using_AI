@@ -91,8 +91,13 @@ prompt = """Suggest some changes about the image for editing, tell on what scale
 def image_prompter(photo,prompt):
     model_1 = genai.GenerativeModel('gemini-pro-vision')
     response = model_1.generate_content([prompt,image])
-    output = response.text
-    return stream_words(output,0.001)
+    try:
+        output = response.text
+        
+    except ValueError:
+        output = """What you asked might be unethical or in appropriate"""
+    finally:
+        return stream_words(output,0.001)
 
 
 #st.toast(":orange[Click on the "<" after #the image has been added for the editing #tools]")
