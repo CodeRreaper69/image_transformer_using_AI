@@ -251,6 +251,8 @@ if uploaded_file is not None:
         st.toast(":red[Now click on the generate button]")
     st.markdown(":violet[Click the button below to generate a response based on your custom query.]")
     custom_prompt = st.button("Generate Custom Prompt")
+    st.markdown("## PromptGenerationArea")
+
 
     # Action when the first button is clicked
     if generate:
