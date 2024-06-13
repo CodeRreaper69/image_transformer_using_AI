@@ -89,11 +89,8 @@ prompt = """Suggest some changes about the image for editing, tell on what scale
                 so as to enhance the picture quality, just write some points about those values and also about the image, like 2-3 lines """
 
 def image_prompter(photo,prompt):
-    model_1 = genai.GenerativeModel('gemini-pro-vision')
-    model_2 =
-genai.GenerativeModel('gemini-1.5-flash')
-    try:
-        response = model_2.generate_content([prompt,image])
+    model = genai.GenerativeModel('gemini-1.5-flash')
+        response = model.generate_content([prompt,image])
         output = response.text
         
     except ValueError:
