@@ -198,4 +198,65 @@ if uploaded_file is not None:
         file_name=f"edited_image.{save_option.lower()}",
         mime=f"image/{save_option.lower()}"
     ):
-        st.toast(":rainbow[THANKS FOR DOWNLOADING
+        st.toast(":rainbow[THANKS FOR DOWNLOADING]")
+
+    done_editing = st.button("DONE EDITING")
+
+    if done_editing:
+        st.balloons()
+        st.toast(":rainbow[CONGRATULATIONS ON EDITING THE IMAGE]")
+        st.snow()
+
+    st.subheader(":green[### INTRODUCING AI CORNER ###]")
+
+    with st.expander(":red[KNOW MORE ABOUT THIS SECTION]"):
+        st.write(":orange[***THIS SECTION IS AN EXPERIMENTAL PART WHERE YOU CAN INTERACT WITH THE IMAGE USING AI, ASK ABOUT SUGGESTIONS FOR EDITING, OR GET MORE ABOUT THE UPLOADED IMAGE***]")
+        st.caption(":red[***REMEMBER THIS IS TOTALLY EXPERIMENTAL...***]")
+        st.caption(":blue[***THANKS TO GEMINI GOOGLE***]")
+
+    # Explanation for the first button
+    st.write(":violet[### Ask AI for Suggestions]")
+    st.write(":blue[Click the button below to get AI suggestions for editing the uploaded image.]")
+    generate = st.button("AI SUGGESTIONS ABOUT EDITING THE IMAGE")
+
+    st.subheader(":red[___OR___]")  
+    # Explanation for the custom prompt
+    st.write(":orange[### Custom Prompt area]")
+    cust_prompt = st.text_input(":blue[Enter your custom query here (Remember to be ethical)]")
+    if cust_prompt:
+        st.toast(":red[Now click on the generate button]")
+    st.markdown(":violet[Click the button below to generate a response based on your custom query.]")
+    custom_prompt = st.button("Generate Custom Prompt")
+    st.markdown("## PromptGenerationArea")
+
+
+    # Action when the first button is clicked
+    if generate:
+        with st.spinner(":rainbow[PLEASE WAIT WHILE THE IMAGE IS BEING EXAMINED....]"):
+            
+            st.write_stream(image_prompter(image, "Give me suggestions for editing this image"))
+
+    # Action when the custom prompt button is clicked
+    if custom_prompt:
+        with st.spinner(":rainbow[PLEASE BE PATIENT WHILE THE IMAGE AND YOUR QUERY IS BEING EXAMINED!]"):
+            
+            if cust_prompt:
+                st.write_stream(image_prompter(image, cust_prompt))
+            else:
+                st.error(":violet[Please enter a custom prompt.]")
+                st.write_stream(image_prompter(image, cust_prompt))
+            
+
+
+
+
+
+
+
+    
+    
+        
+else:
+    st.toast(":red[Upload an image file to start editing.]")
+    time.sleep(5)
+    st.toast(":red[Upload an image file to start editing.]")
